@@ -25,18 +25,29 @@ export default function ViewUser({ contract }) {
     }
   };
 
-  const timestamp = data[2];
-  const date = new Date(timestamp * 1000);
-  const options = {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-    hour: 'numeric',
-    minute: 'numeric',
-    second: 'numeric',
-  };
+  // const timestamp = data[2];
+  // const date = new Date(timestamp * 1000);
+  // const options = {
+  //   year: 'numeric',
+  //   month: 'long',
+  //   day: 'numeric',
+  //   hour: 'numeric',
+  //   minute: 'numeric',
+  //   second: 'numeric',
+  // };
+  const timestamp = Date.now();
+const date = new Date(timestamp);
+const options = {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  hour: 'numeric',
+  minute: 'numeric',
+  second: 'numeric',
+};
+const formattedDate = date.toLocaleString(undefined, options);
 
-  const formattedDate = date.toLocaleString(undefined, options);
+  // const formattedDate = date.toLocaleString(undefined, options);
 
   return (
     <Flex minH={'50%'} mx={'auto'} align={'center'} justify={'center'} py={12}>
