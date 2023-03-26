@@ -32,7 +32,7 @@ export default function SimpleSidebar({ children }) {
   const [toDisplay, setToDisplay] = useState('addUser');
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const CONTRACT_ADDRESS = '0x64ce516D3a1f4d7053c512dc34B0Ab92F957415d';
+  const CONTRACT_ADDRESS = '0xcE8352D024829b9A70B57dE7617364f1074f4067';
 
   const provider = useProvider();
   const { data: signer } = useSigner({

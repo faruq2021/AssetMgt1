@@ -7,7 +7,7 @@ const Alchemy_HTTP_URL =
   'https://eth-goerli.g.alchemy.com/v2/fapRqQ1mH--mgvuLFA_w_CoNLcfl-j-_';
 
 const PRIVATE_KEY =
-  'ca11fb07a97f864196e982cb2f86497a9ab20af47773f3aef61b555bed65df29';
+  '0d882292bc9c2718a3fe4be39831ccefa8b9cf2a8a7257f32b718774b8ec3b7f';
 
 module.exports = {
   solidity: '0.8.9',

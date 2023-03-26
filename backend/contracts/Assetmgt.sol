@@ -74,17 +74,30 @@ contract Assetmgt {
     }
 
     // The `getCurrentValue` function allows anyone to retrieve a user's current value from the mapping by their address.
-    function getCurrentValue(address userAddress)
-        public
-        view
-        returns (uint256)
-    {
-        // Retrieve the user from the mapping.
-        User storage user = users[userAddress];
+    // function getCurrentValue(address userAddress)
+    //     public
+    //     view
+    //     returns (uint256,uint256,uint256)
+    // {
+    //     // Retrieve the user from the mapping.
+    //     User storage user = users[userAddress];
 
-        // Return the user's current value.
-        return user.currentValue;
-    }
+    //     // Return the user's current value.
+    //     return (user.initialValue, user.balance, user.currentValue );
+
+    // }
+    function getCurrentValue(address userAddress)
+    public
+    view
+    returns (uint256[3] memory)
+{
+    // Retrieve the user from the mapping.
+    User storage user = users[userAddress];
+
+    // Return the user's current value.
+    return [user.initialValue, user.balance, user.currentValue];
+}
+
 
     function transfer(address payable recipient, uint256 amount) public {
     // Retrieve the user from the mapping.
